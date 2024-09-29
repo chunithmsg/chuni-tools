@@ -2,8 +2,13 @@
   "name": "chuni-tools",
   "version": "1.0.0",
   "description": "",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "ci": "pnpm install --frozen-lockfile",
+    "ci": "bun install --frozen-lockfile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "contributors": [
@@ -13,6 +18,9 @@
     }
   ],
   "dependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.10"
   }
 }
