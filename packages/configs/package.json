@@ -1,0 +1,7 @@
+{
+  "name": "@chuni-tools/configs",
+  "version": "0.0.1",
+  "files": [
+    "tsconfig.json"
+  ]
+}

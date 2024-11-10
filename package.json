@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "ci": "bun install --frozen-lockfile",
+    "ci": "pnpm install --frozen-lockfile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "contributors": [
@@ -17,10 +13,12 @@
       "email": "onghinjourn@gmail.com"
     }
   ],
-  "dependencies": {
-    "typescript": "^5"
-  },
   "devDependencies": {
-    "@types/bun": "^1.1.10"
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "nx": "20.0.12",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0"
   }
 }
