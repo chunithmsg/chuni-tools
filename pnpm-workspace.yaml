@@ -1,8 +1,3 @@
 packages:
   - packages/*
   - apps/*
-
-catalog:
-  "@types/node": ^22.9.0
-  esbuild: ^0.24.0
-  esbuild-node-externals: ^1.15.0

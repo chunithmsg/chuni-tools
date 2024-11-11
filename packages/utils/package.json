@@ -9,8 +9,6 @@
     "dev": "rimraf dist && tsc -w"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "esbuild": "catalog:",
-    "esbuild-node-externals": "catalog:"
+    "@chuni-tools/configs": "workspace:*"
   }
 }
