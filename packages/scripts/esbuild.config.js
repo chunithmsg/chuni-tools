@@ -1,4 +1,3 @@
-/* eslint-disable no-undef, @typescript-eslint/no-require-imports */
 const esbuild = require("esbuild");
 const { nodeExternalsPlugin } = require("esbuild-node-externals");
 

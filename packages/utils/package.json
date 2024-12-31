@@ -6,9 +6,13 @@
   "scripts": {
     "build": "rimraf dist && tsc && node esbuild.config.js",
     "build:prod": "rm -rf dist && node esbuild.config.js",
-    "dev": "rimraf dist && tsc -w"
+    "dev": "rimraf dist && tsc -w",
+    "lint": "biome check"
   },
   "devDependencies": {
     "@chuni-tools/configs": "workspace:*"
+  },
+  "nx": {
+    "tags": ["scope:packages"]
   }
 }

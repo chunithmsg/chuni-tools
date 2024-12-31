@@ -1,5 +1,5 @@
 {
-  "extends": "@chuni-tools/configs/tsconfig.json",
+  "extends": "@chuni-tools/configs/tsconfig",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",

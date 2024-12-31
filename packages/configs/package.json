@@ -1,7 +1,8 @@
 {
   "name": "@chuni-tools/configs",
+  "type": "module",
   "version": "0.0.1",
-  "files": [
-    "tsconfig.json"
-  ]
+  "exports": {
+    "./tsconfig": "./tsconfig.js"
+  }
 }
