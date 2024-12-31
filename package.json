@@ -5,6 +5,9 @@
   "private": true,
   "scripts": {
     "ci": "pnpm install --frozen-lockfile",
+    "dev:apps": "nx run-many -t dev --projects=tag:scope:apps",
+    "docs": "pnpm --filter docs",
+    "lint:packages": "nx run-many -t lint --projects=tag:scope:packages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "contributors": [
@@ -14,14 +17,12 @@
     }
   ],
   "devDependencies": {
-    "@eslint/js": "^9.14.0",
-    "@types/node": "^22.9.0",
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22",
     "esbuild": "^0.24.0",
     "esbuild-node-externals": "^1.15.0",
-    "eslint": "^9.14.0",
     "nx": "20.0.12",
     "rimraf": "^6.0.1",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.13.0"
+    "typescript": "^5"
   }
 }
