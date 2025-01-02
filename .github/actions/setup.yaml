@@ -1,0 +1,20 @@
+name: 'setup action for pnpm'
+description: 'setup action for pnpm'
+
+runs:
+  using: 'composite'
+
+  steps:
+    - uses: pnpm/action-setup@v4
+      with:
+        version: latest
+        run_install: false
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/jod
+        cache: pnpm
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm run ci

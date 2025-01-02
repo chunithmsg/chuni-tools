@@ -13,7 +13,10 @@ jobs:
   #   steps:
   #     - uses: actions/checkout@v4
 
-  #     - uses: oven-sh/setup-bun@v2
+  #     - name: setup nodejs, pnpm and installs packages
+  #       uses: ./.github/actions/setup
+
+  #     - uses: pnpm run lint
 
   build:
     name: build
@@ -21,7 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v2
+      - name: setup nodejs, pnpm and installs packages
+        uses: ./.github/actions/setup
+
+      - uses: pnpm run build:apps
 
   # test:
   #   name: test
@@ -29,7 +35,10 @@ jobs:
   #   steps:
   #     - uses: actions/checkout@v4
 
-  #     - uses: oven-sh/setup-bun@v2
+  #     - name: setup nodejs, pnpm and installs packages
+  #       uses: ./.github/actions/setup
+
+  #     - uses: pnpm run test
 
   deploy:
     name: deploy
@@ -38,8 +47,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v2
-
-      - name: Deploy
+      - name: deploy
         run: echo "Deploying to production"
         
