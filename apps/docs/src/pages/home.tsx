@@ -1,10 +1,7 @@
-import { Link } from "react-router";
-
 function Home() {
   return (
-    <div>
-      <Link to="/page1">page1</Link>
-      <Link to="/page2">page2</Link>
+    <div className="mx-auto max-w-2xl min-h-screen p-4">
+      <h1>Title</h1>
     </div>
   );
 }
