@@ -4,6 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
+    "build": "nx run-many -t build",
+    "build:apps": "nx run-many -t build --projects=tag:scope:apps",
+    "build:packages": "nx run-many -t build --projects=tag:scope:packages",
     "ci": "pnpm install --frozen-lockfile",
     "dev:apps": "nx run-many -t dev --projects=tag:scope:apps",
     "docs": "pnpm --filter docs",
