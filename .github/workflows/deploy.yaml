@@ -23,7 +23,7 @@ jobs:
   #     - name: setup nodejs, pnpm and installs packages
   #       uses: ./.github/actions/setup
 
-  #     - uses: pnpm run lint
+  #     - run: pnpm run lint
 
   build:
     name: build
@@ -34,7 +34,7 @@ jobs:
       - name: setup nodejs, pnpm and installs packages
         uses: ./.github/actions/setup
 
-      - uses: pnpm run build:apps
+      - run: pnpm run build:apps
 
       - name: saves build as artifact
         uses: actions/upload-artifact@v4
@@ -51,7 +51,7 @@ jobs:
   #     - name: setup nodejs, pnpm and installs packages
   #       uses: ./.github/actions/setup
 
-  #     - uses: pnpm run test
+  #     - run: pnpm run test
 
   deploy:
     name: deploy
