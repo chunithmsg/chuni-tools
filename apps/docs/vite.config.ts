@@ -1,7 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import react from "@vitejs/plugin-react";
-import { defineConfig, type PluginOption } from "vite";
+import {
+  defineConfig,
+  loadEnv,
+  type UserConfig,
+  type PluginOption,
+} from "vite";
 
 const postBuild = (): PluginOption => {
   return {
@@ -49,11 +54,16 @@ const postBuild = (): PluginOption => {
   };
 };
 
-export default defineConfig({
-  plugins: [react(), postBuild()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+export default ({ mode }: UserConfig) => {
+  process.env = { ...process.env, ...loadEnv(mode!, process.cwd()) };
+
+  return defineConfig({
+    plugins: [react(), postBuild()],
+    base: process.env.BASE_URL || "/",
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
     },
-  },
-});
+  });
+};
